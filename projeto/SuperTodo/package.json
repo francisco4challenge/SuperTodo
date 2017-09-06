@@ -1,0 +1,37 @@
+{
+  "name": "nodets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "node ./build/app/app.js",
+    "unit-test": "node node_modules/tape/bin/tape \"./build/**/*.unit.test.js\"",
+    "func-test": "node node_modules/tape/bin/tape \"./build/**/*.func.test.js\"",
+    "cucumber": "./node_modules/.bin/cucumber-js --compiler ts:ts-node/register",
+    "tsc": "tsc -p .",
+    "cont-tsc": "tsc -w",
+    "clean": "rm -rf build && mkdir build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/blue-tape": "0.1.31",
+    "@types/chai": "4.0.4",
+    "@types/cucumber": "2.0.3",
+    "@types/express": "^4.0.37",
+    "@types/selenium-webdriver": "3.0.6",
+    "@types/tape": "4.2.29",
+    "blue-tape": "1.0.0",
+    "chai": "4.1.2",
+    "chromedriver": "2.32.1",
+    "cucumber": "3.0.0",
+    "selenium-webdriver": "3.5.0",
+    "tape": "4.6.3",
+    "ts-node": "3.3.0",
+    "typescript": "2.5.2"
+  },
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}

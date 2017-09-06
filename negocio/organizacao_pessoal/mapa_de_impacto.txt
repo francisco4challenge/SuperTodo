@@ -1,0 +1,8 @@
+Participantes: Clientes da Productive INC
+Capacidades: Ser capaz de gerir as tarefas
+Funcionalidades: Plataforma online onde se pode gerir as suas tarefas;
+
+
+	   
+
+
