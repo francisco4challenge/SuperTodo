@@ -1,6 +1,6 @@
 import { RequestHandler, Express } from 'express';
 export interface Endpoint {
-  method: 'get';
+  method: 'get' | 'post';
   path: string;
   handlers: RequestHandler[];
 }

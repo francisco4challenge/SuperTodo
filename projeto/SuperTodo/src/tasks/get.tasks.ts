@@ -27,19 +27,8 @@ export function getTasksPlugin(
     path: '/',
     handlers: [
       function (req, res) {
-        const task = getTasks()[0];
-        res.header('Content-Type', 'text/html');
-        res.send(`<!DOCTYPE html>
-        <HTML>
-          <HEAD>
-              <TITLE>
-                Tasks
-              </TITLE>
-          </HEAD>
-        <BODY>
-          <H1 name="task1">${task.title} ${task.description} ${task.status}</H1>
-        </BODY>
-        </HTML>`);
+        const tasks = getTasks();
+        res.render('tasks', { tasks });
       }
     ]
   };

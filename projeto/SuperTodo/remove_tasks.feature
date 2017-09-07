@@ -12,7 +12,7 @@ Funcionalidade: Apagar todas as tarefas
 Cenário: Apagar tarefas
     Dados os seguintes dados
     | Título          | Descrição    | Estado    |
-    | Fazer a barba   | Com jeitinho | TODO      |
-    | Lavar os dentes | Com jeitinho | TODO      |
+    | Fazer a barba   | Com jeitinho | Por fazer |
+    | Lavar os dentes | Com jeitinho | Por fazer |
     Quando o Jojo carrega no botão para destuir as tarefas
     Então o Jojo já não vai ter tarefas

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<HTML>
+
+<HEAD>
+  <TITLE>
+    Tasks
+  </TITLE>
+</HEAD>
+
+<BODY>
+  <form action="/tasks" method="POST">
+    <input type="text" name="createTitle" ><br>
+    <input type="text" name="createDescription" ><br><br>
+    <select name="createStatus">
+      <option value="TODO">Por fazer</option>
+      <option value="DONE">Concluida</option>
+    </select>
+    <input type="submit" value="Submit" name="createTaskButton">
+  </form>
+
+  <div id="tasks">
+    <ul>
+      {{#each tasks}}
+        <li>{{title}} {{description}} {{status}}</li>
+      {{/each}}
+    </ul>
+  </div>
+
+</BODY>
+
+</HTML>

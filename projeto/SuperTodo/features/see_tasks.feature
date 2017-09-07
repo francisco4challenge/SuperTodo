@@ -10,10 +10,10 @@ Funcionalidade: Ver tarefas
 #     - Descrição (texto)
 #     - Estado (multivalor: "Concluida", "Por fazer")
 Cenário: Ver as minhas tarefas
-    Dadas as tarefas com os seguintes dados
+    Dadas que existem as seguintes tarefas
     | Título        | Descrição    | Estado    |
-    | Fazer a barba | Com jeitinho | TODO      |
-    Quando o Jojo vai à página das suas tarefas 
+    | Fazer a barba | Com jeitinho | Por fazer |
+    Quando o Jojo vai à página das tarefas 
     Então o Jojo deve ver as tarefas
     | Título        | Descrição    | Estado    |
     | Fazer a barba | Com jeitinho | Por fazer |
