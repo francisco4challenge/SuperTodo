@@ -20,8 +20,14 @@
 
   <div id="tasks">
     <ul>
-      {{#each tasks}}
-        <li>{{title}} {{description}} {{status}}</li>
+      {{#each tasks}} 
+        <form action="/deleteTask" method="POST">
+            <li>{{title}} {{description}} {{status}}</li> 
+            <input type="submit" value="Delete" name="deleteTaskButton{{@index}}">
+            <input type="hidden" name="title" value="{{title}}">     
+            <input type="hidden" name="description" value="{{description}}">  
+            <input type="hidden" name="status" value="{{status}}">      
+        </form>            
       {{/each}}
     </ul>
   </div>

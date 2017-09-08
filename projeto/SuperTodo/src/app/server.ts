@@ -14,6 +14,7 @@ export function startServer(db: { tasks: Task[] }) {
   const taskPlugins = getPlugins(db);
   connectPlugin(app, taskPlugins.tasksPlugin);
   connectPlugin(app, taskPlugins.createTaskPlugin);
+  connectPlugin(app, taskPlugins.deleteTaskPlugin);
   
 
   return new Promise((resolve, reject) => {

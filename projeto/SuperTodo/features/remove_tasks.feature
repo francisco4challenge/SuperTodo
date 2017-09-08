@@ -15,3 +15,5 @@ Cenário: Apagar tarefa
     | Fazer a barba   | Com jeitinho | Por fazer |
     Quando o Jojo carrega no botão para apagar a tarefa
     Então o Jojo já não vai ver a tarefa que apagou
+    | Título          | Descrição    | Estado    |
+    | Fazer a barba   | Com jeitinho | Por fazer |
