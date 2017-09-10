@@ -8,10 +8,10 @@
     "unit-test": "node node_modules/tape/bin/tape \"./build/**/*.unit.test.js\"",
     "func-test": "node node_modules/tape/bin/tape \"./build/**/*.func.test.js\"",
     "cucumber": "./node_modules/.bin/cucumber-js --compiler  ts:ts-node/register",
-    "cucumber-args": "./node_modules/.bin/cucumber-js  --compiler  ts:ts-node/register ",
     "tsc": "tsc -p .",
     "cont-tsc": "tsc -w",
-    "clean": "rm -rf build && mkdir build"
+    "clean": "rm -rf build && mkdir build",
+    "cucumber-feature": "node ./scripts/script.cucumber.js ./node_modules/.bin/cucumber-js"
   },
   "keywords": [],
   "author": "",
