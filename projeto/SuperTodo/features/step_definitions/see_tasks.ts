@@ -35,7 +35,7 @@ defineSupportCode(function ({ Given, When, Then }) {
     const taskAsStrings = tasks.map(t => `${t.title} ${t.description} ${t.status}`);
 
     const driver = this.driver as ThenableWebDriver;
-    const listItems = await driver.findElements(By.xpath(`//div[@id='tasks']/ul/li`));
+    const listItems = await driver.findElements(By.xpath(`//div[@id="tasks"]/ul/form/li`));
     expect(listItems.length).to.be.eql(taskAsStrings.length);
     listItems.forEach(async e => expect(taskAsStrings).to.contain(await e.getText()));
   });

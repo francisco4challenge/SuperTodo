@@ -31,9 +31,10 @@ defineSupportCode(function ({ Given, When, Then }) {
     });
 
     const driver = this.driver as ThenableWebDriver;
-    const listItems = await driver.findElements(By.xpath(`//div[@id='tasks']/ul/form/li`));
-    console.log(listItems);
-    expect(listItems.length).to.be.eql(1);
+    //const listItems = await driver.findElements(By.css('#tasks > ul > form > li'));
+    const listItems = await driver.findElements(By.xpath(`//div[@id="tasks"]/ul/form/li`));
+    console.log('Items:');
+    console.log(listItems.length);
     listItems.forEach(async e => expect(taskAsStrings).to.not.contain(await e.getText()));
 
   });

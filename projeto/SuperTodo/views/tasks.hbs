@@ -9,13 +9,13 @@
 
 <BODY>
   <form action="/tasks" method="POST">
-    <input type="text" name="createTitle" ><br>
-    <input type="text" name="createDescription" ><br><br>
+    <input type="text" name="createTitle"></input><br>
+    <input type="text" name="createDescription"></input><br><br>
     <select name="createStatus">
       <option value="TODO">Por fazer</option>
       <option value="DONE">Concluida</option>
     </select>
-    <input type="submit" value="Submit" name="createTaskButton">
+    <input type="submit" value="Submit" name="createTaskButton"></input>
   </form>
 
   <div id="tasks">
@@ -23,10 +23,10 @@
       {{#each tasks}} 
         <form action="/deleteTask" method="POST">
             <li>{{title}} {{description}} {{status}}</li> 
-            <input type="submit" value="Delete" name="deleteTaskButton{{@index}}">
-            <input type="hidden" name="title" value="{{title}}">     
-            <input type="hidden" name="description" value="{{description}}">  
-            <input type="hidden" name="status" value="{{status}}">      
+            <input type="submit" value="Delete" name="deleteTaskButton{{@index}}"></input>
+            <input type="hidden" name="title" value="{{title}}"></input>     
+            <input type="hidden" name="description" value="{{description}}"></input>
+            <input type="hidden" name="status" value="{{status}}"></input>      
         </form>            
       {{/each}}
     </ul>
