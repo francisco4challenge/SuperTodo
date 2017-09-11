@@ -13,6 +13,7 @@ export function deleteTask(
       updatedRepo.splice(index, 1);
     }
   });
+  repo.tasks = updatedRepo;
 }
 
 export function mapViewToTask(taskView: TaskView): Task {
